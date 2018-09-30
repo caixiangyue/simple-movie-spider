@@ -1,0 +1,11 @@
+<!doctype html>
+<title>zn&xiaocai</title>
+<h1><center>临时电影院</center></h1>
+{% for movie in movies %}
+  <p><a href={{ movie.link }}>电影名：{{ movie.title }}</a>
+    主演：
+    {% for role in movie.main_role %}
+    {{role}}
+    {% endfor %}
+    &nbsp;地区：{{movie.area}}&nbsp;上映时间：{{movie.date}}</p>
+{% endfor %}
